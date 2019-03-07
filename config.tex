@@ -1,0 +1,77 @@
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} 
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\usepackage{booktabs} 
+
+
+
+\institute[HUJI] 
+{
+%================= logos no meio =====================
+\vspace*{-0.35cm}
+\hspace*{0.25cm}~%
+\vspace*{0.35cm}\\
+Introduction to Machine Learning (67577)}
+\date{\today}
+
+\AtBeginSection[]
+{
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
+% \usecolortheme{crane}
+\newtheorem{exercise}{Exercise}
+\newtheorem{remark}{Remark}
+\newtheorem{claim}{Claim}
+
+\let\OLDremark=\remark
+\def\remark{%
+  \setbeamercolor{block title}{bg=Gray}%
+  \setbeamercolor{block body}{fg=black,bg=white!80!Gray}\OLDremark
+}
+\let\OLDtheorem=\theorem
+\def\theorem{%
+  \setbeamercolor{block title}{bg=black!65!brown}%
+  \setbeamercolor{block body}{fg=black,bg=white!80!brown}\OLDtheorem
+}
+\let\OLDclaim=\claim
+\def\claim{%
+  \setbeamercolor{block title}{bg=black!60!red}%
+  \setbeamercolor{block body}{fg=black,bg=white!85!red}\OLDclaim
+}
+\let\OLDcorollary=\corollary
+\def\corollary{%
+  \setbeamercolor{block title}{bg=black!65!orange}%
+  \setbeamercolor{block body}{fg=black,bg=white!80!orange}\OLDcorollary
+}
+\let\OLDproof=\proof
+\def\proof{%
+  \setbeamercolor{block title}{bg=Dandelion}%
+  \setbeamercolor{block body}{fg=black,bg=white!80!yellow}\OLDproof
+}
+\let\OLDexercise=\exercise
+\def\exercise{%
+  \setbeamercolor{block title}{bg=OliveGreen}%
+  \setbeamercolor{block body}{fg=black,bg=white!80!LimeGreen}\OLDexercise
+}
+\let\OLDsolution=\solution
+\def\solution{%
+  \setbeamercolor{block title}{bg=BurntOrange}%
+  \setbeamercolor{block body}{fg=black,bg=white!80!Dandelion}\OLDsolution
+}
+\let\OLDlemma=\lemma
+\def\lemma{%
+  \setbeamercolor{block title}{bg=Orchid}%
+  \setbeamercolor{block body}{fg=black,bg=white!80!Purple}\OLDlemma
+}
+
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
